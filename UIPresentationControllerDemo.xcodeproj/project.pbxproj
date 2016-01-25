@@ -16,11 +16,11 @@
 		1886E20D1C560992003B1560 /* UIPresentationControllerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E20C1C560992003B1560 /* UIPresentationControllerDemoUITests.m */; };
 		1886E21E1C5609FD003B1560 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E21D1C5609FD003B1560 /* SecondViewController.m */; };
 		1886E2211C560A2C003B1560 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E2201C560A2C003B1560 /* FirstViewController.m */; };
-		1886E2311C560BF4003B1560 /* QIUDismissAnimtaion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E2271C560BF4003B1560 /* QIUDismissAnimtaion.m */; };
-		1886E2321C560BF4003B1560 /* QIUPercenDrivenIneractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E2291C560BF4003B1560 /* QIUPercenDrivenIneractiveTransition.m */; };
-		1886E2331C560BF4003B1560 /* QIUPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E22C1C560BF4003B1560 /* QIUPresentationController.m */; };
-		1886E2341C560BF4003B1560 /* QIUPresentingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E22E1C560BF4003B1560 /* QIUPresentingAnimation.m */; };
-		1886E2351C560BF4003B1560 /* QIUPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E2301C560BF4003B1560 /* QIUPresentViewController.m */; };
+		1886E2431C561996003B1560 /* QIUDismissAnimtaion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E2391C561996003B1560 /* QIUDismissAnimtaion.m */; };
+		1886E2441C561996003B1560 /* QIUPercenDrivenIneractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E23B1C561996003B1560 /* QIUPercenDrivenIneractiveTransition.m */; };
+		1886E2451C561996003B1560 /* QIUPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E23D1C561996003B1560 /* QIUPresentationController.m */; };
+		1886E2461C561996003B1560 /* QIUPresentingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E23F1C561996003B1560 /* QIUPresentingAnimation.m */; };
+		1886E2471C561996003B1560 /* QIUPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886E2421C561996003B1560 /* QIUPresentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,17 +59,17 @@
 		1886E21D1C5609FD003B1560 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		1886E21F1C560A2C003B1560 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		1886E2201C560A2C003B1560 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		1886E2261C560BF4003B1560 /* QIUDismissAnimtaion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUDismissAnimtaion.h; sourceTree = "<group>"; };
-		1886E2271C560BF4003B1560 /* QIUDismissAnimtaion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QIUDismissAnimtaion.m; sourceTree = "<group>"; };
-		1886E2281C560BF4003B1560 /* QIUPercenDrivenIneractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUPercenDrivenIneractiveTransition.h; sourceTree = "<group>"; };
-		1886E2291C560BF4003B1560 /* QIUPercenDrivenIneractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QIUPercenDrivenIneractiveTransition.m; sourceTree = "<group>"; };
-		1886E22A1C560BF4003B1560 /* QIUPresentAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUPresentAnimationViewController.h; sourceTree = "<group>"; };
-		1886E22B1C560BF4003B1560 /* QIUPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUPresentationController.h; sourceTree = "<group>"; };
-		1886E22C1C560BF4003B1560 /* QIUPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QIUPresentationController.m; sourceTree = "<group>"; };
-		1886E22D1C560BF4003B1560 /* QIUPresentingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUPresentingAnimation.h; sourceTree = "<group>"; };
-		1886E22E1C560BF4003B1560 /* QIUPresentingAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QIUPresentingAnimation.m; sourceTree = "<group>"; };
-		1886E22F1C560BF4003B1560 /* QIUPresentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUPresentViewController.h; sourceTree = "<group>"; };
-		1886E2301C560BF4003B1560 /* QIUPresentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QIUPresentViewController.m; sourceTree = "<group>"; };
+		1886E2381C561996003B1560 /* QIUDismissAnimtaion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUDismissAnimtaion.h; sourceTree = "<group>"; };
+		1886E2391C561996003B1560 /* QIUDismissAnimtaion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QIUDismissAnimtaion.m; sourceTree = "<group>"; };
+		1886E23A1C561996003B1560 /* QIUPercenDrivenIneractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUPercenDrivenIneractiveTransition.h; sourceTree = "<group>"; };
+		1886E23B1C561996003B1560 /* QIUPercenDrivenIneractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QIUPercenDrivenIneractiveTransition.m; sourceTree = "<group>"; };
+		1886E23C1C561996003B1560 /* QIUPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUPresentationController.h; sourceTree = "<group>"; };
+		1886E23D1C561996003B1560 /* QIUPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QIUPresentationController.m; sourceTree = "<group>"; };
+		1886E23E1C561996003B1560 /* QIUPresentingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUPresentingAnimation.h; sourceTree = "<group>"; };
+		1886E23F1C561996003B1560 /* QIUPresentingAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QIUPresentingAnimation.m; sourceTree = "<group>"; };
+		1886E2401C561996003B1560 /* QIUPresentKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUPresentKit.h; sourceTree = "<group>"; };
+		1886E2411C561996003B1560 /* QIUPresentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUPresentViewController.h; sourceTree = "<group>"; };
+		1886E2421C561996003B1560 /* QIUPresentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QIUPresentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +120,7 @@
 		1886E1E61C560992003B1560 /* UIPresentationControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1886E2251C560BF4003B1560 /* src */,
+				1886E2371C56198F003B1560 /* src */,
 				1886E1EA1C560992003B1560 /* AppDelegate.h */,
 				1886E1EB1C560992003B1560 /* AppDelegate.m */,
 				1886E1F01C560992003B1560 /* Main.storyboard */,
@@ -162,20 +162,20 @@
 			path = UIPresentationControllerDemoUITests;
 			sourceTree = "<group>";
 		};
-		1886E2251C560BF4003B1560 /* src */ = {
+		1886E2371C56198F003B1560 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				1886E2261C560BF4003B1560 /* QIUDismissAnimtaion.h */,
-				1886E2271C560BF4003B1560 /* QIUDismissAnimtaion.m */,
-				1886E2281C560BF4003B1560 /* QIUPercenDrivenIneractiveTransition.h */,
-				1886E2291C560BF4003B1560 /* QIUPercenDrivenIneractiveTransition.m */,
-				1886E22A1C560BF4003B1560 /* QIUPresentAnimationViewController.h */,
-				1886E22B1C560BF4003B1560 /* QIUPresentationController.h */,
-				1886E22C1C560BF4003B1560 /* QIUPresentationController.m */,
-				1886E22D1C560BF4003B1560 /* QIUPresentingAnimation.h */,
-				1886E22E1C560BF4003B1560 /* QIUPresentingAnimation.m */,
-				1886E22F1C560BF4003B1560 /* QIUPresentViewController.h */,
-				1886E2301C560BF4003B1560 /* QIUPresentViewController.m */,
+				1886E2381C561996003B1560 /* QIUDismissAnimtaion.h */,
+				1886E2391C561996003B1560 /* QIUDismissAnimtaion.m */,
+				1886E23A1C561996003B1560 /* QIUPercenDrivenIneractiveTransition.h */,
+				1886E23B1C561996003B1560 /* QIUPercenDrivenIneractiveTransition.m */,
+				1886E23C1C561996003B1560 /* QIUPresentationController.h */,
+				1886E23D1C561996003B1560 /* QIUPresentationController.m */,
+				1886E23E1C561996003B1560 /* QIUPresentingAnimation.h */,
+				1886E23F1C561996003B1560 /* QIUPresentingAnimation.m */,
+				1886E2401C561996003B1560 /* QIUPresentKit.h */,
+				1886E2411C561996003B1560 /* QIUPresentViewController.h */,
+				1886E2421C561996003B1560 /* QIUPresentViewController.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -310,15 +310,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1886E2311C560BF4003B1560 /* QIUDismissAnimtaion.m in Sources */,
-				1886E2351C560BF4003B1560 /* QIUPresentViewController.m in Sources */,
-				1886E2341C560BF4003B1560 /* QIUPresentingAnimation.m in Sources */,
+				1886E2431C561996003B1560 /* QIUDismissAnimtaion.m in Sources */,
+				1886E2471C561996003B1560 /* QIUPresentViewController.m in Sources */,
+				1886E2461C561996003B1560 /* QIUPresentingAnimation.m in Sources */,
 				1886E21E1C5609FD003B1560 /* SecondViewController.m in Sources */,
 				1886E1EC1C560992003B1560 /* AppDelegate.m in Sources */,
 				1886E1E91C560992003B1560 /* main.m in Sources */,
 				1886E2211C560A2C003B1560 /* FirstViewController.m in Sources */,
-				1886E2321C560BF4003B1560 /* QIUPercenDrivenIneractiveTransition.m in Sources */,
-				1886E2331C560BF4003B1560 /* QIUPresentationController.m in Sources */,
+				1886E2441C561996003B1560 /* QIUPercenDrivenIneractiveTransition.m in Sources */,
+				1886E2451C561996003B1560 /* QIUPresentationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +544,7 @@
 				1886E2131C560992003B1560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1886E2141C560992003B1560 /* Build configuration list for PBXNativeTarget "UIPresentationControllerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +553,7 @@
 				1886E2161C560992003B1560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1886E2171C560992003B1560 /* Build configuration list for PBXNativeTarget "UIPresentationControllerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +562,7 @@
 				1886E2191C560992003B1560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

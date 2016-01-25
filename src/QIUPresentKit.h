@@ -1,13 +1,13 @@
 //
-//  QIUPresentAnimationViewController.h
+//  QIUPresentKit.h
 //  UIPresentationControllerDemo
 //
 //  Created by QiuFeng on 1/25/16.
 //  Copyright © 2016 www.qiufeng.me. All rights reserved.
 //
 
-#ifndef QIUPresentAnimationViewController_h
-#define QIUPresentAnimationViewController_h
+#ifndef QIUPresentKit_h
+#define QIUPresentKit_h
 
 #import "QIUPresentViewController.h"
 

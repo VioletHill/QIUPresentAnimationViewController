@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "QIUPresentAnimationViewController"
+  s.name         = "QIUPresentKit"
   s.version      = "0.0.1"
   s.summary      = "Launch animation like Twitter"
                    
