@@ -13,4 +13,4 @@
     QIUPresentViewController *controller = [[QIUPresentViewController alloc] initWithViewController:nextController];
     [self presentViewController:controller animated:YES completion:nil];
     
-具体说明实现见 [这里](http://qiufeng.me/ios8uipresentationcontroller/)
+具体说明实现见 [这里](http://qiufeng.me/ios8uipresentationcontroller)
