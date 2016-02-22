@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/VioletHill/QIUPresentAnimationViewController"
   s.license      = 'MIT'  
   s.author       = { "QiuFeng" => "qfviolethill@163.com" }
-  s.source       = { :git => "https://github.com/VioletHill/QIUPresentAnimationViewController.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/VioletHill/QIUPresentAnimationViewController.git", :tag => "0.0.2" }
   s.source_files = 'src/*.{h,m}'
   s.framework  = 'UIKit', 'Foundation'
   s.platform     = :ios, '8.0'
