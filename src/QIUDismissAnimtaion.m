@@ -8,6 +8,10 @@
 
 #import "QIUDismissAnimtaion.h"
 
+@interface QIUDismissAnimtaion ()
+
+@end
+
 @implementation QIUDismissAnimtaion
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {

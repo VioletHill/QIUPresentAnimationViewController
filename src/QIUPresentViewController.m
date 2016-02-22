@@ -38,8 +38,14 @@
         [subview addGestureRecognizer:gesture];
         self.modalPresentationStyle = UIModalPresentationCustom;
         self.transitioningDelegate = self;
+        [self setDefaultParams];
     }
     return self;
+}
+
+- (void)setDefaultParams {
+    self.topGuide = 80;
+    self.scale = 0.90;
 }
 
 - (void)viewDidLoad {
@@ -50,7 +56,7 @@
 
 - (QIUPercenDrivenIneractiveTransition *)percentDrivenInteractiveTransition {
     if (_percentDrivenInteractiveTransition == nil) {
-        _percentDrivenInteractiveTransition = [[QIUPercenDrivenIneractiveTransition alloc] init];
+        _percentDrivenInteractiveTransition = [[QIUPercenDrivenIneractiveTransition alloc] initWithTopGuide:self.topGuide transformScale:self.scale];
     }
     return _percentDrivenInteractiveTransition;
 }
@@ -92,7 +98,6 @@
 
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
     QIUPresentationController *controller = [[QIUPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
-   
     return controller;
 }
 
@@ -101,7 +106,7 @@
 }
 
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    return [[QIUPresentingAnimation alloc] init];
+    return [[QIUPresentingAnimation alloc] initWithTopGuide:self.topGuide scale:self.scale];
 }
 
 - (id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {

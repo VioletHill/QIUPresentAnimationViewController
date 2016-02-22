@@ -12,17 +12,28 @@
 
 @property (nonatomic, strong) id <UIViewControllerContextTransitioning> transitionContext;
 
+@property (nonatomic, assign) CGFloat topGuide;
+@property (nonatomic, assign) CGFloat scale;
+
 @end
 
 @implementation QIUPercenDrivenIneractiveTransition
 
+- (instancetype)initWithTopGuide:(CGFloat)topGuide transformScale:(CGFloat)scale {
+    if (self = [super init]) {
+        self.topGuide = topGuide;
+        self.scale = scale;
+    }
+    return self;
+}
+
 - (void)updateView:(CGFloat)percentComplete {
     UIViewController *fromViewController =  [self.transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [self.transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    toViewController.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.9 + 0.1 *percentComplete, 0.9 + 0.1 * percentComplete);
+    toViewController.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, self.scale + (1 - self.scale) * percentComplete, self.scale + (1 - self.scale) * percentComplete);
     CGRect finalFrame = [self.transitionContext containerView].bounds;
-    finalFrame.size.height = CGRectGetHeight(finalFrame) - 100;
-    finalFrame.origin.y = 100 + percentComplete * CGRectGetHeight(finalFrame);
+    finalFrame.size.height = CGRectGetHeight(finalFrame) - self.topGuide;
+    finalFrame.origin.y = self.topGuide + percentComplete * CGRectGetHeight(finalFrame);
     fromViewController.view.frame = finalFrame;
 }
 
