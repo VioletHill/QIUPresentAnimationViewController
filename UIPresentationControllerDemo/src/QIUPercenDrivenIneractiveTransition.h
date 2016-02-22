@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface QIUPercenDrivenIneractiveTransition : UIPercentDrivenInteractiveTransition
 
+- (instancetype)initWithTopGuide:(CGFloat)topGuide transformScale:(CGFloat)scale;
+
 @end
+
+NS_ASSUME_NONNULL_END

@@ -14,6 +14,8 @@
 - (IBAction)composeBarButtonItemTouchUpInside:(UIBarButtonItem *)sender {
     UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondViewController"];
     QIUPresentViewController *nextController = [[QIUPresentViewController alloc] initWithViewController:controller];
+//    nextController.topGuide = 80;
+//    nextController.scale = 0.9;
     [self presentViewController:nextController animated:YES completion:nil];
 }
 

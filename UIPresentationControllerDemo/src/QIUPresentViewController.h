@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithViewController:(UIViewController *)viewController;
 
+@property (nonatomic, assign) CGFloat topGuide;
+@property (nonatomic, assign) CGFloat scale;
+
 @end
 
 NS_ASSUME_NONNULL_END
