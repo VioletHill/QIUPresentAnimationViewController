@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name         = "QIUPresentKit"
   s.version      = "0.0.3"
-  s.summary      = "Launch animation like Twitter"
+  s.summary      = "Present Like Mail"
                    
   s.homepage     = "https://github.com/VioletHill/QIUPresentAnimationViewController"
   s.license      = 'MIT'  
