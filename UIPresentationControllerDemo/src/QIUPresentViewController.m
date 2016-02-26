@@ -16,6 +16,7 @@
 @interface QIUPresentViewController () <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, strong) UIViewController *subViewController;
+@property (nonatomic, strong) UIViewController *fromViewController;
 @property (nonatomic, strong) QIUPercenDrivenIneractiveTransition *percentDrivenInteractiveTransition;
 
 @property (nonatomic, assign) BOOL isInteracting;
@@ -88,7 +89,6 @@
                 [self.percentDrivenInteractiveTransition cancelInteractiveTransition];
             }
         }
-            
         default:
             break;
     }
@@ -106,11 +106,22 @@
 }
 
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    self.fromViewController = presenting;
     return [[QIUPresentingAnimation alloc] initWithTopGuide:self.topGuide scale:self.scale];
 }
 
 - (id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
     return self.isInteracting ? self.percentDrivenInteractiveTransition : nil;
+}
+
+#pragma mark - <Rotate>
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        self.fromViewController.view.bounds = CGRectMake(0, 0, size.width, size.height);
+    }];
 }
 
 @end

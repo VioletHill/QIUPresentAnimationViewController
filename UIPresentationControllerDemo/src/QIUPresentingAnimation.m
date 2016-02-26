@@ -13,6 +13,8 @@
 @property (nonatomic, assign) CGFloat topGuide;
 @property (nonatomic, assign) CGFloat scale;
 
+@property (nonatomic, strong) NSLayoutConstraint *topConstraint;
+
 @end
 
 @implementation QIUPresentingAnimation
@@ -31,21 +33,22 @@
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-    
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
-    CGRect toFrame = [transitionContext containerView].bounds;
-    toFrame.size.height = toView.frame.size.height - self.topGuide;
-    toFrame.origin.y = [transitionContext containerView].bounds.size.height;
-    toView.frame = toFrame;
+    UIView *superView = [transitionContext containerView];
+    [superView addSubview:toView];
     
-    [[transitionContext containerView] addSubview:toView];
+    toView.translatesAutoresizingMaskIntoConstraints = NO;
+    [superView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[toView]-0-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:@{@"topGuide": @(self.topGuide)} views:NSDictionaryOfVariableBindings(toView)]];
+    [superView addConstraint:[NSLayoutConstraint constraintWithItem:toView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeHeight multiplier:1 constant:-self.topGuide]];
+    self.topConstraint = [NSLayoutConstraint constraintWithItem:toView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:superView attribute:NSLayoutAttributeTop multiplier:1.0 constant:CGRectGetHeight(superView.bounds)];
+    [superView addConstraint:self.topConstraint];
+    [superView layoutIfNeeded];
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         fromViewController.view.transform = CGAffineTransformMakeScale(self.scale, self.scale);
-        CGRect finalFrame = toFrame;
-        finalFrame.origin.y  = self.topGuide;
-        toView.frame = finalFrame;
+        self.topConstraint.constant = self.topGuide;
+        [superView layoutIfNeeded];
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];

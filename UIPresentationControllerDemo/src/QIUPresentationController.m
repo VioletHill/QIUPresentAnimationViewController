@@ -18,8 +18,10 @@
 
 - (void)presentationTransitionWillBegin {
     [self.containerView addSubview:self.dimmingView];
-    self.dimmingView.frame = self.containerView.bounds;
     self.dimmingView.alpha = 0;
+    self.dimmingView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_dimmingView]-0-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(_dimmingView)]];
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_dimmingView]-0-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(_dimmingView)]];
     [self.presentingViewController.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
         self.dimmingView.alpha = 0.4;
     } completion:nil];
