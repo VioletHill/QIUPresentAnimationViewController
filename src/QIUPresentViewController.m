@@ -111,7 +111,6 @@
 }
 
 - (id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
-    return nil;
     return self.isInteracting ? self.percentDrivenInteractiveTransition : nil;
 }
 
