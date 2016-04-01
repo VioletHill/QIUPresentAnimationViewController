@@ -22,10 +22,11 @@
     QIUPresentViewController *controller = [[QIUPresentViewController alloc] initWithViewController:nextController];
     //    nextController.topGuide = 80;
 	//    nextController.scale = 0.9;
-	//    nextController.duration = 0.1
+	//    nextController.showDuration = 0.1
+	//	  nextController.dismissDuration = 0.3
     [self presentViewController:controller animated:YES completion:nil];
     //   if you want to presentViewController without animated, use below code:
-    //   nextController.duration = 0.0
+    //   nextController.showDuration = 0.0
     //   [self presentViewController:controller animated:YES completion:nil];
     
 [详情见这里](http://qiufeng.me/ios8uipresentationcontroller)

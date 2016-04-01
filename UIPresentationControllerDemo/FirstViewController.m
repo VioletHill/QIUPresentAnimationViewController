@@ -16,7 +16,7 @@
     QIUPresentViewController *nextController = [[QIUPresentViewController alloc] initWithViewController:controller];
 //    nextController.topGuide = 80;
 //    nextController.scale = 0.9;
-//    nextController.duration = 0;
+//    nextController.showDuration = 0;
     [self presentViewController:nextController animated:YES completion:nil];
 }
 

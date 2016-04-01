@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) CGFloat topGuide;
 @property (nonatomic, assign) CGFloat scale;
-@property (nonatomic, assign) NSTimeInterval duration;
+@property (nonatomic, assign) NSTimeInterval showDuration;
+@property (nonatomic, assign) NSTimeInterval dismissDuration;
 
 @end
 
