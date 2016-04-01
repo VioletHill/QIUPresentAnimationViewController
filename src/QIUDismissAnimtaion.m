@@ -10,12 +10,21 @@
 
 @interface QIUDismissAnimtaion ()
 
+@property (nonatomic, assign) NSTimeInterval duration;
+
 @end
 
 @implementation QIUDismissAnimtaion
 
+- (instancetype)initWithDuration:(NSTimeInterval)duration {
+    if (self = [super init]) {
+        self.duration = duration;
+    }
+    return self;
+}
+
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.4;
+    return self.duration;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {

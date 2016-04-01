@@ -47,6 +47,7 @@
 - (void)setDefaultParams {
     self.topGuide = 80;
     self.scale = 0.90;
+    self.duration = 0;
 }
 
 - (void)viewDidLoad {
@@ -57,7 +58,7 @@
 
 - (QIUPercenDrivenIneractiveTransition *)percentDrivenInteractiveTransition {
     if (_percentDrivenInteractiveTransition == nil) {
-        _percentDrivenInteractiveTransition = [[QIUPercenDrivenIneractiveTransition alloc] initWithTopGuide:self.topGuide transformScale:self.scale];
+        _percentDrivenInteractiveTransition = [[QIUPercenDrivenIneractiveTransition alloc] initWithTopGuide:self.topGuide transformScale:self.scale duration:self.duration];
     }
     return _percentDrivenInteractiveTransition;
 }
@@ -102,12 +103,12 @@
 }
 
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    return [[QIUDismissAnimtaion alloc] init];
+    return [[QIUDismissAnimtaion alloc] initWithDuration:self.duration];
 }
 
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     self.fromViewController = presenting;
-    return [[QIUPresentingAnimation alloc] initWithTopGuide:self.topGuide scale:self.scale];
+    return [[QIUPresentingAnimation alloc] initWithTopGuide:self.topGuide scale:self.scale duration:self.duration];
 }
 
 - (id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {

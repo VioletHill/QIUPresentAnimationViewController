@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign) CGFloat topGuide;
 @property (nonatomic, assign) CGFloat scale;
+@property (nonatomic, assign) CGFloat duration;
 
 @property (nonatomic, strong) NSLayoutConstraint *topConstraint;
 
@@ -19,16 +20,17 @@
 
 @implementation QIUPresentingAnimation
 
-- (instancetype)initWithTopGuide:(CGFloat)topGuide scale:(CGFloat)scale {
+- (instancetype)initWithTopGuide:(CGFloat)topGuide scale:(CGFloat)scale duration:(CGFloat)duration {
     if (self = [super init]) {
         self.topGuide = topGuide;
         self.scale = scale;
+        self.duration = duration;
     }
     return self;
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.4;
+    return self.duration;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {

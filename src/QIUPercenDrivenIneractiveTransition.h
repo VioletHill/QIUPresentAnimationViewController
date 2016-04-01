@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QIUPercenDrivenIneractiveTransition : UIPercentDrivenInteractiveTransition
 
-- (instancetype)initWithTopGuide:(CGFloat)topGuide transformScale:(CGFloat)scale;
+- (instancetype)initWithTopGuide:(CGFloat)topGuide transformScale:(CGFloat)scale duration:(NSTimeInterval)duration;
 
 @end
 

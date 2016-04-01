@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QIUDismissAnimtaion : NSObject <UIViewControllerAnimatedTransitioning>
 
+- (instancetype)initWithDuration:(NSTimeInterval)duration;
+
 @end
 
 NS_ASSUME_NONNULL_END

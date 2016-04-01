@@ -14,15 +14,17 @@
 
 @property (nonatomic, assign) CGFloat topGuide;
 @property (nonatomic, assign) CGFloat scale;
+@property (nonatomic, assign, readwrite) NSTimeInterval animationDuration;
 
 @end
 
 @implementation QIUPercenDrivenIneractiveTransition
 
-- (instancetype)initWithTopGuide:(CGFloat)topGuide transformScale:(CGFloat)scale {
+- (instancetype)initWithTopGuide:(CGFloat)topGuide transformScale:(CGFloat)scale duration:(NSTimeInterval)duration {
     if (self = [super init]) {
         self.topGuide = topGuide;
         self.scale = scale;
+        self.animationDuration = duration;
     }
     return self;
 }
@@ -43,7 +45,7 @@
 }
 
 - (void)finishInteractiveTransition {
-    [UIView animateWithDuration:0.4 * (1 - self.percentComplete) animations:^{
+    [UIView animateWithDuration:self.animationDuration * (1 - self.percentComplete) animations:^{
         [self updateView:1];
     } completion:^(BOOL finished) {
         [super finishInteractiveTransition];
@@ -52,7 +54,7 @@
 }
 
 - (void)cancelInteractiveTransition {
-    [UIView animateWithDuration:0.4 * self.percentComplete animations:^{
+    [UIView animateWithDuration:self.animationDuration * self.percentComplete animations:^{
         [self updateView:0];
     } completion:^(BOOL finished) {
         [super cancelInteractiveTransition];

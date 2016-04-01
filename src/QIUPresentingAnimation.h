@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QIUPresentingAnimation : NSObject <UIViewControllerAnimatedTransitioning>
 
-- (instancetype)initWithTopGuide:(CGFloat)topGuide scale:(CGFloat)scale;
+- (instancetype)initWithTopGuide:(CGFloat)topGuide scale:(CGFloat)scale duration:(CGFloat)duration;
 
 @end
 
