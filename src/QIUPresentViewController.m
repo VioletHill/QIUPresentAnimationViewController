@@ -47,7 +47,7 @@
 - (void)setDefaultParams {
     self.topGuide = 80;
     self.scale = 0.90;
-    self.duration = 0;
+    self.duration = 0.3;
 }
 
 - (void)viewDidLoad {
